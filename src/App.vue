@@ -1,10 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import LandingPage from './components/LandingPage.vue'
-import Login from './components/Login.vue'
-import Signup from './components/Signup.vue'
-import AboutUs from './components/AboutUs.vue'
+
 </script>
 
 <template>
@@ -15,12 +10,7 @@ import AboutUs from './components/AboutUs.vue'
   </header>
 
   <main>
-    <div class="wrapper">
-      <LandingPage/>
-      <Login/>
-      <Signup/>
-      <About/>
-    </div>
+    <router-view></router-view>
     
   </main>
 </template>
