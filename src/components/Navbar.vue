@@ -20,6 +20,12 @@
             <div>
                 <v-btn to="/Register" color="white" dark> Register </v-btn>
             </div>
+            <div>
+                <v-btn to="/AdmssionForm" color="white" dark> Admssion Form </v-btn>
+            </div>
+            <div>
+                <v-btn to="/students" color="white" dark> Students</v-btn>
+            </div>
             
         </v-app-bar>
     </div>

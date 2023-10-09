@@ -6,6 +6,7 @@ import Login from "./../components/Login.vue"
 import Signup from "./../components/Signup.vue"
 import Register from "./../components/Register.vue"
 import AdmissionForm from "./../components/AdmissionForm.vue"
+import Students from "./../components/Students.vue"
 
 
 
@@ -40,7 +41,13 @@ const routes =[
         path: '/AdmissionForm',
         name: 'AdmissionForm',
         component: AdmissionForm,
+    },
+    {
+        path: '/students',
+        name: 'students',
+        component: Students,
     }
+
 ]
 const router = createRouter({
     history: createWebHistory(),
