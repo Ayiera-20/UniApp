@@ -2,7 +2,7 @@
     export default {
         data() {
             return{
-                students: [
+                lecturers: [
                     {firstname: 'Haile',
                     lastname: 'Selassie',
                     gender: 'Male',
@@ -26,6 +26,18 @@
                     gender: 'Male',
                     email: 'Mandela@gmail.com',
                     phone: '254711800525'
+                    },
+                    {firstname: 'Tom',
+                    lastname: 'Mboya',
+                    gender: 'Male',
+                    email: 'Mboya@gmail.com',
+                    phone: '254711800525'
+                    },
+                    {firstname: 'Dedan',
+                    lastname: 'Kimathi',
+                    gender: 'Male',
+                    email: 'Kimathi@gmail.com',
+                    phone: '254711800525'
                     }
                     ]
                 }
@@ -35,7 +47,7 @@
 
 </script>
 <template>
-    <div id = 'students'>
+    <div id = 'lecturers'>
         <v-container>
             <v-container>
                 <v-layout column>
@@ -47,7 +59,7 @@
                             theme="dark"
                         >
                             <v-toolbar-title class="text-h6">
-                                Students
+                                Lecturers
                             </v-toolbar-title>
                         </v-toolbar>
                         <v-container>
@@ -63,13 +75,13 @@
                                     </thead>
                                     <tbody>
                                     <tr
-                                    v-for="student in students" :key="student.id"
+                                    v-for="lecturer in lecturers" :key="lecturer.id"
                                     >
-                                        <td>{{ student.firstname }}</td>
-                                        <td>{{ student.lastname }}</td>
-                                        <td>{{ student.gender}}</td>
-                                        <td>{{ student.email }}</td>
-                                        <td>{{ student.phone }}</td>
+                                        <td>{{ lecturer.firstname }}</td>
+                                        <td>{{ lecturer.lastname }}</td>
+                                        <td>{{ lecturer.gender}}</td>
+                                        <td>{{ lecturer.email }}</td>
+                                        <td>{{ lecturer.phone }}</td>
                                     </tr>
                                     </tbody>
                                 </v-table>

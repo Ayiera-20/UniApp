@@ -5,9 +5,12 @@ import AboutUs from "./../components/AboutUs.vue"
 import Login from "./../components/Login.vue"
 import Signup from "./../components/Signup.vue"
 import Register from "./../components/Register.vue"
-import AdmissionForm from "./../components/AdmissionForm.vue"
 import Students from "./../components/Students.vue"
-
+import Lecturers from "./../components/Lecturers.vue"
+import Courses from  "./../components/Courses.vue"
+import Hostels from  "./../components/Hostels.vue"
+import Departments from  "./../components/Departments.vue"
+import Classroom from  "./../components/Classroom.vue"
 
 
 
@@ -38,15 +41,36 @@ const routes =[
         component: Register,
     },
     {
-        path: '/AdmissionForm',
-        name: 'AdmissionForm',
-        component: AdmissionForm,
-    },
-    {
         path: '/students',
         name: 'students',
         component: Students,
+    },
+    {
+        path: '/Lecturers',
+        name: 'lecturers',
+        component: Lecturers,
+    },
+    {
+        path: '/Courses',
+        name: 'courses',
+        component: Courses,
+    },
+    {
+        path: '/Hostels',
+        name: 'hostels',
+        component: Hostels,
+    },
+    {
+        path: '/Departments',
+        name: 'departments',
+        component: Departments,
+    },
+    {
+        path: '/Classroom',
+        name: 'classroom',
+        component: Classroom,
     }
+
 
 ]
 const router = createRouter({

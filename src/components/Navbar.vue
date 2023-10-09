@@ -19,13 +19,26 @@
             </div>
             <div>
                 <v-btn to="/Register" color="white" dark> Register </v-btn>
-            </div>
-            <div>
-                <v-btn to="/AdmssionForm" color="white" dark> Admssion Form </v-btn>
-            </div>
+            </div>            
             <div>
                 <v-btn to="/students" color="white" dark> Students</v-btn>
             </div>
+            <div>
+                <v-btn to="/Lecturers" color="white" dark> Lecturers</v-btn>
+            </div>
+             <div>
+                <v-btn to="/Courses" color="white" dark> Courses </v-btn>
+            </div>
+             <div>
+                <v-btn to="/Hostels" color="white" dark> Hostels </v-btn>
+            </div>
+            <div>
+                <v-btn to="/Departments" color="white" dark> Departments </v-btn>
+            </div>
+             <div>
+                <v-btn to="/Classroom" color="white" dark> Classroom </v-btn>
+            </div>
+            
             
         </v-app-bar>
     </div>
