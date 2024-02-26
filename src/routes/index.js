@@ -11,6 +11,8 @@ import Courses from  "./../components/Courses.vue"
 import Hostels from  "./../components/Hostels.vue"
 import Departments from  "./../components/Departments.vue"
 import Classroom from  "./../components/Classroom.vue"
+import NewCourse from  "./../components/NewCourse.vue"
+import UpdateCourse from  "./../components/UpdateCourse.vue"
 
 
 
@@ -69,7 +71,17 @@ const routes =[
         path: '/Classroom',
         name: 'classroom',
         component: Classroom,
-    }
+    },
+   {
+        path: '/NewCourse',
+        name: 'Newcourse',
+        component: NewCourse,
+   },
+   {    path: '/UpdateCourse',
+        name: 'UpdateCourse',
+        component: UpdateCourse,
+
+   }
 
 
 ]
