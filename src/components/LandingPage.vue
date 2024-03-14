@@ -5,47 +5,39 @@
 
 <template>
     <div id = 'LandingPage'>
-        <h1> Welcome to UniApp </h1>
-        
-        <div class="navimage">
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#Welcome to University of Africa">Home</a></li>
-                    <li> <a href=""></a>About Us</li>
-                    <li><a href="#200 major Programs"></a>Programs</li>
-                    <li>Admissions</li>
-                    <li><a href="#CAMPUS LIFE">Student Corner</a></li>
-                    <li><a href="Upcomingevents.html"></a>News & events</li>
-                    <li>Contact</li>
-                </ul>
-             </nav>
-        </div>
         
         <div class="awards">
             <h1>Welcome to University of Africa</h1>
-            <p>Accreditations and awards</p>
+            <br>
         </div>
         <div class="logos">
-                <img src="./../assets/research-logo-design.jpg" alt="research award logo" width="80" height="60">
-                <p>Top 10 Research University</p>
+                <img src="./../assets/research-logo-design.jpg" alt="research award logo" width="80" height="60" >
+                <br>
                 <img src="./../assets/robotics.jpg" alt="robotics logo" width="60" height="60">
-                <p>Cutting-Edge Robotics Research</p>
+                <br>              
                 <img src="./../assets/diversity.jpg" alt="diversity & Inclusion award logo" width="60" height="60">
-                <p>Diversity and Inclusion Award</p>
+                <br>            
                 <img src="./../assets/Innovation.png" alt="innovation hub award logo" width="200" height="50">
-                <p>Innovation Hub</p>
+              
         </div>
+        <br>
+        <br>
         <h2>200 major Programs</h2>
+        <br>
         <div class="major">
+            <div class="major-item">
                 <img src="./../assets/young-student-learning-library.jpg" alt="young student studying" width="300" height="200">
                 <p>Graduate</p>
+            </div>
+            <div class="major-item">
                 <img src="./../assets/portrait-woman-with-laptop-working.jpg" alt="portrait-woman-with-laptop-working" width="300" height="200">
                 <p>Lifelong learning</p>
-        </div>
-        <div>
-            <img src="./../assets/beautiful-day-campus.jpg" alt="young student smiling" width="300" height="200">
-            <p>Undergraduate</p>
-        </div>     
+            </div>
+            <div class="major-item">
+                <img src="./../assets/beautiful-day-campus.jpg" alt="young student smiling" width="300" height="200">
+                <p>Undergraduate</p>
+            </div>
+        </div>    
         <div class="courses">
             <p id="schools">SIX schools in which to pursue your passions</p>
                 <ul id="schools">
@@ -101,4 +93,88 @@
     </div>
         
 </template>
+
+<style>
+#LandingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.awards,
+.major,
+.courses,
+.campus_life,
+.events,
+.apply {
+    text-align: center;
+}
+
+.logos,
+.major,
+.campus_photos,
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.campus_photos img,
+.campus_photos video {
+    margin: 10px;
+}
+
+.events div {
+    margin: 20px;
+}
+
+.apply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.apply div {
+    margin-right: 20px;
+}
+
+.button,
+.button1,
+.apply button {
+    margin-top: 20px;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    .campus_photos img,
+    .campus_photos video {
+        width: 100%;
+    }
+
+    .apply {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apply div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+.major {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.major-item {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+</style>
     
