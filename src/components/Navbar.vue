@@ -15,9 +15,6 @@
                 <v-btn to="/login" color="white" dark> Log In </v-btn>
             </div>
             <div>
-                <v-btn to="/signup" color="white" dark> Sign Up </v-btn>
-            </div>
-            <div>
                 <v-btn to="/Register" color="white" dark> Register </v-btn>
             </div>            
             <div>

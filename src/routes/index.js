@@ -3,7 +3,6 @@ import {createRouter, createWebHistory} from 'vue-router'
 import LandingPage from "./../components/LandingPage.vue"
 import AboutUs from "./../components/AboutUs.vue"
 import Login from "./../components/Login.vue"
-import Signup from "./../components/Signup.vue"
 import Register from "./../components/Register.vue"
 import Students from "./../components/Students.vue"
 import Lecturers from "./../components/Lecturers.vue"
@@ -26,11 +25,6 @@ const routes =[
         path: '/about',
         name: 'about',
         component: AboutUs,
-    },
-    {
-        path: '/Signup',
-        name: 'Signup',
-        component: Signup,
     },
     {
         path: '/Login',
