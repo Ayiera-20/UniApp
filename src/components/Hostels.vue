@@ -69,3 +69,13 @@
 
                 
 </template>
+
+<style>
+#hostels{
+    background: url('./../assets/hostel.jpg') no-repeat center center/cover;
+    min-height: 100vh; 
+    height: 100vh; 
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+</style>
