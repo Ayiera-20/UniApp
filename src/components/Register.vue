@@ -1,16 +1,3 @@
-<script>
-    export default {
-        data: () => ({
-            first: null,
-            last: null,
-            email: null,
-            password: null,
-            phone: null,
-            terms: false,
-        }),
-    }
-
-</script>
 <template>
     <div id = 'signup'>
         <v-container>
@@ -93,3 +80,18 @@
 
                 
 </template>
+
+
+<script>
+    export default {
+        data: () => ({
+            first: null,
+            last: null,
+            email: null,
+            password: null,
+            phone: null,
+            terms: false,
+        }),
+    }
+
+</script>
