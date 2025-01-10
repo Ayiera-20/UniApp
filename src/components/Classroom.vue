@@ -1,34 +1,3 @@
-<script>
-    export default {
-        data() {
-            return{
-                classroom: [
-                    {classname: 'Ericsson',
-                     Building: 'STC',                
-                    },
-                    {classname: 'Safari',
-                     Building: 'STC',                
-                    },
-                    {classname: 'Turban',
-                     Building: 'Business School',                
-                    },
-                    {classname: 'Highly',
-                     Building: 'School of computing',                
-                    },     
-                    {classname: 'Lowkey',
-                     Building: 'Law School',                
-                    },
-                    {classname: 'Urban',
-                     Building: 'School of Hospitality',                
-                    },             
-                    
-                    ]
-                }
-                
-              },
-    }
-
-</script>
 <template>
     <div id = 'classroom'>
         <v-container>
@@ -71,8 +40,47 @@
              </v-container>
         </v-container>
         </div>
-
-
-
-                
+     
 </template>
+
+<script>
+    export default {
+        data() {
+            return{
+                classroom: [
+                    {classname: 'Ericsson',
+                     Building: 'STC',                
+                    },
+                    {classname: 'Safari',
+                     Building: 'STC',                
+                    },
+                    {classname: 'Turban',
+                     Building: 'Business School',                
+                    },
+                    {classname: 'Highly',
+                     Building: 'School of computing',                
+                    },     
+                    {classname: 'Lowkey',
+                     Building: 'Law School',                
+                    },
+                    {classname: 'Urban',
+                     Building: 'School of Hospitality',                
+                    },             
+                    
+                    ]
+                }
+                
+              },
+    }
+
+</script>
+
+<style>
+#classroom{
+    background: url('./../assets/class.jpg') no-repeat center center/cover;
+    min-height: 100vh; 
+    height: 100vh; 
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+</style>
