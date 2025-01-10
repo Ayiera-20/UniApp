@@ -1,43 +1,100 @@
-<script>
-
-</script>
-
 <template>
-  <v-container>
-    <v-layout row>
-      <v-flex xs12>
-        <v-card class="pa-3">
-          <v-card-title class="headline">About Us: University of Africa</v-card-title>
+  <div class="services-section">
+    <div class="bg-image">
+    <h1>About Us</h1> 
+  </div>
+    <v-container class="cards-container">
+    <v-row>
+        <v-col cols="12" md="4">
+          <v-card class="pa-3 card" elevation="10" rounded="lg">
+          <v-card-title class="headline">Our Mission</v-card-title>
           <v-card-text>
             <p>
               The University of Africa is a leading institution of higher learning dedicated to academic excellence, innovation, and community impact.
               Established with a commitment to providing quality education, the university offers a diverse range of programs designed to empower students to achieve their academic and professional goals.
             </p>
-            <p>
-              At the University of Africa, we believe in nurturing the next generation of leaders, thinkers, and innovators. Our faculty consists of accomplished scholars and industry experts who are passionate about teaching and mentoring students.
-              With state-of-the-art facilities and a dynamic learning environment, we provide students with the tools and resources they need to succeed in a rapidly changing world.
-            </p>
+          </v-card-text>
+        </v-card>
+        </v-col>
+
+        <v-col cols="12" md="4">
+          <v-card class="pa-3 black-card card" elevation="10" rounded="lg">
+          <v-card-title class="headline">Community Impact</v-card-title>
+          <v-card-text>
             <p>
               Our commitment to excellence extends beyond the classroom. We actively engage with the community through various outreach programs and initiatives, making a positive impact on society.
               Through research and innovation, we strive to address the challenges facing our world and contribute to its sustainable development.
             </p>
+          </v-card-text>
+        </v-card>
+        </v-col>
+
+        <v-col cols="12" md="4">
+          <v-card class="pa-3 beige-card card" elevation="10" rounded="lg">
+          <v-card-title class="headline">Our Goal</v-card-title>
+          <v-card-text>
             <p>
               As a university rooted in values of integrity, diversity, and inclusivity, we welcome students from all backgrounds and cultures. Whether you are seeking to further your education or enhance your career prospects, the University of Africa is committed to helping you achieve your dreams and make a difference in the world.
-              Join us on a journey of discovery, growth, and success.
             </p>
           </v-card-text>
         </v-card>
-      </v-flex>
-    </v-layout>
+        </v-col>
+    </v-row>
   </v-container>
+
+  </div>
+  
 </template>
 
 <script>
 export default {
-  // Add any necessary data or methods
+
 };
 </script>
 
-<style>
-/* Add any custom styles */
+<style scoped>
+.beige-card{
+  background-color: rgba(247,237,225,255);
+}
+.black-card{
+  background-color: black;
+  color: white;
+}
+
+.bg-image{
+  background: url('./../assets/Uni-image.jpg') no-repeat center center/cover;
+  min-height: 10vh; 
+  height: 50vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cards-container {
+  position: relative;
+  margin-top: -100px; 
+  z-index: 2;
+  
+}
+
+.services-section{
+  position: relative;
+}
+
+h1{
+  color: white;
+}
+
+.card{
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+}
+.card:hover{
+  transform: translateY(-10px);
+}
 </style>
