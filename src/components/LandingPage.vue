@@ -34,41 +34,37 @@
                 </div>
             </div>    
             <div class="departments">
-            <!-- Department 1 -->
             <div class="department-card">
             <img src="./../assets/techathon.jpg" alt="ECE Department">
             <h3 class="department-title">Department of ECE</h3>
             <p>BSc in Electrical & Electronic Engineering - 140</p>
             <p>BSc in Computer Science & Engineering - 140</p>
             <p>BSc in Electronics & Telecommunication Engineering - 140</p>
-            <a href="#" class="learn-more">Learn more &rarr;</a>
+            <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
-            <!-- Department 2 -->
             <div class="department-card">
             <img src="./../assets/Career day.jpg" alt="School of Law Department">
             <h3 class="department-title">Department of Law</h3>
             <p>Bachelor of Law - 146 Credit Hours</p>
-            <a href="#" class="learn-more">Learn more &rarr;</a>
+            <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
-            <!-- Department 3 -->
             <div class="department-card">
             <img src="./../assets/young-student-learning-library.jpg" alt="Business Department">
             <h3 class="department-title">Department of Business</h3>
             <p>BBA - 123 Credits</p>
             <p>MBA (Regular) - 60 Credits</p>
             <p>EMBA (Executive) - 45 Credits</p>
-            <a href="#" class="learn-more">Learn more &rarr;</a>
+            <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
-            <!-- Department 4 -->
             <div class="department-card">
             <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="English Department">
             <h3 class="department-title">Department of English</h3>
             <p>BA in English - 120 Credits</p>
             <p>MA in English Language Teaching - 36 Credits</p>
-            <a href="#" class="learn-more">Learn more &rarr;</a>
+            <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
             </div>
         </section>
@@ -142,7 +138,7 @@
                 <p>Offer extraordinary freedom to exlore, to collaborate, and <br> to challenge yourself.</p>
                 <v-btn 
             color="black" 
-            href="/about"
+            href="/register"
             class="more-btn">
                 Apply Now
                 <v-icon right>mdi-arrow-right</v-icon>
@@ -248,13 +244,12 @@
 
 .departments {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px; /* Space between cards */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
   max-width: 800px;
-  margin: 0 auto; /* Center grid */
+  margin: 0 auto; 
 }
 
-/* Individual Cards */
 .department-card {
   background-color: white;
   border-radius: 8px;
@@ -264,7 +259,7 @@
 }
 
 .department-card:hover {
-  transform: translateY(-10px); /* Slight hover effect */
+  transform: translateY(-10px);
 }
 
 .department-card img {
@@ -276,7 +271,7 @@
 .department-title {
   font-size: 1.5rem;
   margin: 15px 0 0 0px;
-  color: #2b3d9f; /* Blue title */
+  color: rgb(7, 70, 7); 
 }
 
 .department-card p {
@@ -289,7 +284,7 @@
   display: inline-block;
   margin: 15px;
   font-size: 0.9rem;
-  color: #e74c3c; /* Red text */
+  color: #e74c3c; 
   text-decoration: none;
   font-weight: bold;
 }
@@ -355,9 +350,7 @@
 .apply {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin-top: 30px;
-    /* padding: 60px 300px 100px 300px; */
     text-align: left;
     background-color: rgba(247,237,225,255);
     padding: 60px;
@@ -376,7 +369,7 @@
 }
 
 
-/* Adjustments for mobile responsiveness */
+
 @media (max-width: 768px) {
     .campus_photos img,
     .campus_photos video {
