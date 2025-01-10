@@ -12,6 +12,7 @@ import Departments from  "./../components/Departments.vue"
 import Classroom from  "./../components/Classroom.vue"
 import NewCourse from  "./../components/NewCourse.vue"
 import UpdateCourse from  "./../components/UpdateCourse.vue"
+import Faculty from '../components/Faculty.vue'
 
 
 
@@ -75,7 +76,12 @@ const routes =[
         name: 'UpdateCourse',
         component: UpdateCourse,
 
-   }
+   },
+   {    path: '/Faculty',
+        name: 'faculty',
+        component: Faculty,
+
+}
 
 
 ]
