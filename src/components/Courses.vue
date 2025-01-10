@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 import { computed } from '@vue/reactivity'; 
 import axios from 'axios';
 import NewCourse from './NewCourse.vue';
@@ -8,59 +8,116 @@ import router from '../routes';
         data() {
             return{
                 Courses: [
-                    // {id: 1,
-                    // Coursename: 'Fullstack',
-                    // Department: 'ilabAfrica',  
-                    // Amount: 50000, 
-                    // Actions: '',                  
-                    // },
-                    // {id: 2,
-                    // Coursename: 'Security',
-                    // Department: 'ilabAfrica', 
-                    // Amount: 50000, 
-                    // Actions: '', 
-                    // },
-                    // {id: 3,
-                    // Coursename: 'ACCA',
-                    // Department: 'Business School',    
-                    // Amount: 50000,   
-                    // Actions: '',               
-                    // },
-                    // {id: 4,
-                    // Coursename: 'law',
-                    // Department: 'Law School',      
-                    // Amount: 50000,    
-                    // Actions: '',          
-                    // },
-                    // {id: 5,
-                    // Coursename: 'Machine Learning',
-                    // Department: 'ilabAfrica',
-                    // Amount: 50000, 
-                    // Actions: '', 
-                    // },
-                    // {id: 6,
-                    // Coursename: 'Computer Science',
-                    // Department: 'School of computing',  
-                    // Amount: 50000, 
-                    // Actions: '', 
-                    // },
-                    // {id: 7,
-                    // Coursename: 'Hospitality',
-                    // Department: 'School of hospitality',
-                    // Amount: 50000, 
-                    // Actions: '', 
-                    // }  
+                    {id: 1,
+                    Coursename: 'Fullstack',
+                    Department: 'ilabAfrica',  
+                    Amount: 50000, 
+                    Actions: '',                  
+                    },
+                    {id: 2,
+                    Coursename: 'Security',
+                    Department: 'ilabAfrica', 
+                    Amount: 50000, 
+                    Actions: '', 
+                    },
+                    {id: 3,
+                    Coursename: 'ACCA',
+                    Department: 'Business School',    
+                    Amount: 50000,   
+                    Actions: '',               
+                    },
+                    {id: 4,
+                    Coursename: 'law',
+                    Department: 'Law School',      
+                    Amount: 50000,    
+                    Actions: '',          
+                    },
+                    {id: 5,
+                    Coursename: 'Machine Learning',
+                    Department: 'ilabAfrica',
+                    Amount: 50000, 
+                    Actions: '', 
+                    },
+                    {id: 6,
+                    Coursename: 'Computer Science',
+                    Department: 'School of computing',  
+                    Amount: 50000, 
+                    Actions: '', 
+                    },
+                    {id: 7,
+                    Coursename: 'Hospitality',
+                    Department: 'School of hospitality',
+                    Amount: 50000, 
+                    Actions: '', 
+                    }  
                     ]
                 }
                
                 
               },
         
-    },
-</script> -->
+    };
+</script>
+
+<template>
+  <div id = 'courses'>
+      <v-container>
+          <v-container>
+              <v-layout column>
+                  <v-card
+                      class="mx-auto"
+                  >
+                  <v-toolbar
+                          color="teal"
+                          theme="dark"
+                      >
+                          <v-toolbar-title class="text-h6">
+                             COURSES
+                          </v-toolbar-title>
+                      </v-toolbar>
+                      <v-container>
+                           <v-table>
+                                  <thead>
+                                  <tr>
+                                      <th class="text-left">Coursename</th>
+                                      <th class="text-left"> Department</th>
+                                      <th class="text-left"> Amount</th>                                       
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr
+                                  v-for="course in Courses" :key="course.id"
+                                  >
+                                      <td>{{ course.Coursename }}</td>
+                                      <td>{{ course.Department}}</td>    
+                                      <td>{{ course.Amount}}</td>                                        
+                                  </tr>                                      
+                                  </tbody>
+                              </v-table>
+                          
+                          </v-container>
+              
+                      <v-divider></v-divider>
+                  </v-card>
+                  </v-layout>
+           </v-container>
+      </v-container>
+      </div>
+   
+</template>
+
+<style>
+#courses{
+    background: url('./../assets/course.jpg') no-repeat center center/cover;
+    min-height: 100vh; 
+    height: 100vh; 
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+</style>
 
 
-<script>
+<!-- <script>
 import { computed } from '@vue/reactivity'; 
 import axios from 'axios';
 import NewCourse from './NewCourse.vue';
@@ -110,9 +167,9 @@ export default {
     this.getCourses();
   },
 };
-</script>
+</script> -->
 
-<template>
+<!-- <template>
     <div id = 'courses'>
         <v-container>
             <v-container>
@@ -140,7 +197,7 @@ export default {
                                     <tr>
                                         <th class="text-left"> id</th>  
                                         <th class="text-left">Coursename</th>
-                                        <!-- <th class="text-left"> Department</th>      -->
+                                         <th class="text-left"> Department</th>      
                                         <th class="text-left"> Amount</th>   
                                         <th class="text-center"> Actions</th>                                    
                                     </tr>
@@ -151,7 +208,7 @@ export default {
                                     >
                                         <td>{{ course.id}}</td>
                                         <td>{{ course.name}}</td>
-                                        <!-- <td>{{ course.Department }}</td>   -->
+                                        <td>{{ course.Department }}</td>  
                                         <td>{{ course.amount}}</td>      
                                         <td> 
                                         
@@ -175,4 +232,4 @@ export default {
 
 
                 
-</template>
+</template> -->
