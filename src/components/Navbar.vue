@@ -3,7 +3,6 @@
         <v-app-bar color="teal" >
             <v-app-bar-title>University of Africa</v-app-bar-title>
 
-            <!-- <v-spacer></v-spacer> -->
 
             <div>
                 <v-btn to ="/" color="white" dark> Home </v-btn>
@@ -12,10 +11,7 @@
                 <v-btn to="/about" color="white" dark>About </v-btn>
             </div>   
             <div>
-                <v-btn to="/students" color="white" dark> Students</v-btn>
-            </div>
-            <div>
-                <v-btn to="/Lecturers" color="white" dark> Lecturers</v-btn>
+                <v-btn to="/Faculty" color="white" dark> Faculty</v-btn>
             </div>
              <div>
                 <v-btn to="/Courses" color="white" dark> Courses </v-btn>
@@ -44,6 +40,6 @@
 <script></script>
 <style>
 .login{
-    padding-left: 0px;
+    padding-left: 80px;
 }
 </style>
