@@ -1,3 +1,60 @@
+<template>
+  <div id = 'courses'>
+      <v-container>
+          <v-container>
+              <v-layout column>
+                  <v-card
+                      class="mx-auto"
+                  >
+                  <v-toolbar
+                          color="teal"
+                          theme="dark"
+                      >
+                          <v-toolbar-title class="text-h6">
+                             Courses
+                          </v-toolbar-title>
+                      </v-toolbar>
+                      <v-container>
+                           <v-table>
+                                  <thead>
+                                  <tr>
+                                      <th class="text-left">Coursename</th>
+                                      <th class="text-left"> Department</th>
+                                      <th class="text-left"> Amount</th>                                       
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr
+                                  v-for="course in Courses" :key="course.id"
+                                  >
+                                      <td>{{ course.Coursename }}</td>
+                                      <td>{{ course.Department}}</td>    
+                                      <td>{{ course.Amount}}</td>                                        
+                                  </tr>                                      
+                                  </tbody>
+                              </v-table>
+                          
+                          </v-container>
+              
+                      <v-divider></v-divider>
+                  </v-card>
+                  </v-layout>
+           </v-container>
+      </v-container>
+      </div>
+   
+</template>
+
+<style>
+#courses{
+    background: url('./../assets/course.jpg') no-repeat center center/cover;
+    min-height: 100vh; 
+    height: 100vh; 
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+</style>
+
 <script>
 import { computed } from '@vue/reactivity'; 
 import axios from 'axios';
@@ -58,63 +115,6 @@ import router from '../routes';
         
     };
 </script>
-
-<template>
-  <div id = 'courses'>
-      <v-container>
-          <v-container>
-              <v-layout column>
-                  <v-card
-                      class="mx-auto"
-                  >
-                  <v-toolbar
-                          color="teal"
-                          theme="dark"
-                      >
-                          <v-toolbar-title class="text-h6">
-                             COURSES
-                          </v-toolbar-title>
-                      </v-toolbar>
-                      <v-container>
-                           <v-table>
-                                  <thead>
-                                  <tr>
-                                      <th class="text-left">Coursename</th>
-                                      <th class="text-left"> Department</th>
-                                      <th class="text-left"> Amount</th>                                       
-                                  </tr>
-                                  </thead>
-                                  <tbody>
-                                  <tr
-                                  v-for="course in Courses" :key="course.id"
-                                  >
-                                      <td>{{ course.Coursename }}</td>
-                                      <td>{{ course.Department}}</td>    
-                                      <td>{{ course.Amount}}</td>                                        
-                                  </tr>                                      
-                                  </tbody>
-                              </v-table>
-                          
-                          </v-container>
-              
-                      <v-divider></v-divider>
-                  </v-card>
-                  </v-layout>
-           </v-container>
-      </v-container>
-      </div>
-   
-</template>
-
-<style>
-#courses{
-    background: url('./../assets/course.jpg') no-repeat center center/cover;
-    min-height: 100vh; 
-    height: 100vh; 
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-</style>
 
 
 <!-- <script>
