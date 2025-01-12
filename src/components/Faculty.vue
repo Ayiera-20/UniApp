@@ -14,7 +14,6 @@
                 <option value="School of Engineering">School of Engineering</option>
                 <option value="School of Hospitality">Hospitality</option>
             </select>
-            <button type="submit">Submit</button>
         </form>
 
         <div class="profiles">
