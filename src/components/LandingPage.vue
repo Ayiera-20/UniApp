@@ -44,7 +44,7 @@
             </div>
 
             <div class="department-card">
-            <img src="./../assets/Career day.jpg" alt="Department of Law">
+            <img src="./../assets/career-day.jpg" alt="Department of Law">
             <h3 class="department-title">Department of Law</h3>
             <p>Bachelor of Law - 146 Credit Hours</p>
             <a href="/departments" class="learn-more">Learn more &rarr;</a>
@@ -80,7 +80,7 @@
             <img src="./../assets/students-paying-attention-class.jpg" alt="students-paying-attention-class" width="30%" height="300px">
             <img src="./../assets/multi-ethnic-group-graduates-smiling-with-success-generated-by-ai.jpg" alt="graduating students" width="30%" height="300px">
             <video width="30%" height="300px" autoplay muted>
-                <source src="./../assets/university lib.mp4" type="video/mp4">
+                <source src="./../assets/university-lib.mp4" type="video/mp4">
             </video>
         </div>   
         <section class="research">
@@ -113,11 +113,11 @@
         <p>Explore opportunities to engage with people, ideas, art and education across campus.</p>
         <div class="events">
             <div>
-                <img src="./../assets/Career day.jpg" alt="career advisors" width="320" height="240">
+                <img src="./../assets/career-day.jpg" alt="career advisors" width="320" height="240">
                 <p>Career day</p>  
             </div>
             <div>
-                <img src="./../assets/culture week.jpg" alt="students dressed in cultural attires" width="360" height="240">
+                <img src="./../assets/culture-week.jpg" alt="students dressed in cultural attires" width="360" height="240">
                 <p>Cultural week</p>
             </div>
             <div>
