@@ -50,3 +50,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+#Login{
+  padding: 80px 0 160px 0;
+}
+</style>

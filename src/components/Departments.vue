@@ -1,45 +1,3 @@
-<script>
-    export default {
-        data() {
-            return{
-                departments: [
-                    {departmentname: 'School of Computing',
-                    Headofdepartment: 'Joseph Sevilla',
-                    DepartmentPhonenumber: 200837438,
-                    NoOfLecturers: 20,                   
-                    },
-                    {departmentname: 'School of Law',
-                    Headofdepartment: 'Lulu Adimu',
-                    DepartmentPhonenumber: 788473878,
-                    NoOfLecturers: 37,                   
-                    },
-                    {departmentname: 'School of Business',
-                    Headofdepartment: 'Zoleka Amahle',
-                    DepartmentPhonenumber: 658473878,
-                    NoOfLecturers: 37,                   
-                    },
-                    {departmentname: 'School of Engineering',
-                    Headofdepartment: 'John Odhiambo',
-                    DepartmentPhonenumber: 2147483647,
-                    NoOfLecturers: 30,                    
-                    },
-                    {departmentname: 'School of Health and Sciences',
-                    Headofdepartment: 'Ciesly Luthando',
-                    DepartmentPhonenumber: 874363678,
-                    NoOfLecturers: 25,                    
-                    },
-                    {departmentname: 'School of Hospitality',
-                    Headofdepartment: 'Maria Perez',
-                    DepartmentPhonenumber: 2147483647,
-                    NoOfLecturers: 23,                    
-                    },                    
-                    ]
-                }
-                
-              },
-    }
-
-</script>
 <template>
     <div id = 'department'>
         <v-container>
@@ -85,9 +43,54 @@
                     </v-layout>
              </v-container>
         </v-container>
-        </div>
-
-
-
-                
+        </div>            
 </template>
+
+<script>
+    export default {
+        data() {
+            return{
+                departments: [
+                    {departmentname: 'School of Computing',
+                    Headofdepartment: 'Joseph Sevilla',
+                    DepartmentPhonenumber: 200837438,
+                    NoOfLecturers: 20,                   
+                    },
+                    {departmentname: 'School of Law',
+                    Headofdepartment: 'Lulu Adimu',
+                    DepartmentPhonenumber: 788473878,
+                    NoOfLecturers: 37,                   
+                    },
+                    {departmentname: 'School of Business',
+                    Headofdepartment: 'Zoleka Amahle',
+                    DepartmentPhonenumber: 658473878,
+                    NoOfLecturers: 37,                   
+                    },
+                    {departmentname: 'School of Engineering',
+                    Headofdepartment: 'John Odhiambo',
+                    DepartmentPhonenumber: 2147483647,
+                    NoOfLecturers: 30,                    
+                    },
+                    {departmentname: 'School of Health and Sciences',
+                    Headofdepartment: 'Ciesly Luthando',
+                    DepartmentPhonenumber: 874363678,
+                    NoOfLecturers: 25,                    
+                    },
+                    {departmentname: 'School of Hospitality',
+                    Headofdepartment: 'Maria Perez',
+                    DepartmentPhonenumber: 2147483647,
+                    NoOfLecturers: 23,                    
+                    },                    
+                    ]
+                }
+                
+              },
+    }
+
+</script>
+
+<style>
+#department{
+    padding-bottom: 30px;
+}
+</style>

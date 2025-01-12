@@ -83,6 +83,7 @@ export default {
 
 .services-section{
   position: relative;
+  padding-bottom: 20px;
 }
 
 h1{
