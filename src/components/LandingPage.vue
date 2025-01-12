@@ -35,23 +35,23 @@
             </div>    
             <div class="departments">
             <div class="department-card">
-            <img src="./../assets/techathon.jpg" alt="ECE Department">
-            <h3 class="department-title">Department of ECE</h3>
+            <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="Department of Engineering">
+            <h3 class="department-title">Department of Engineering</h3>
             <p>BSc in Electrical & Electronic Engineering - 140</p>
-            <p>BSc in Computer Science & Engineering - 140</p>
+            <p>BSc in Civil Engineering - 140</p>
             <p>BSc in Electronics & Telecommunication Engineering - 140</p>
             <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
             <div class="department-card">
-            <img src="./../assets/Career day.jpg" alt="School of Law Department">
+            <img src="./../assets/Career day.jpg" alt="Department of Law">
             <h3 class="department-title">Department of Law</h3>
             <p>Bachelor of Law - 146 Credit Hours</p>
             <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
             <div class="department-card">
-            <img src="./../assets/young-student-learning-library.jpg" alt="Business Department">
+            <img src="./../assets/young-student-learning-library.jpg" alt="Department of Business ">
             <h3 class="department-title">Department of Business</h3>
             <p>BBA - 123 Credits</p>
             <p>MBA (Regular) - 60 Credits</p>
@@ -60,10 +60,10 @@
             </div>
 
             <div class="department-card">
-            <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="English Department">
-            <h3 class="department-title">Department of English</h3>
-            <p>BA in English - 120 Credits</p>
-            <p>MA in English Language Teaching - 36 Credits</p>
+            <img src="./../assets/techathon.jpg" alt="Department of Computing">
+            <h3 class="department-title">Department of Computing</h3>
+            <p>BA in Computer Science - 120 Credits</p>
+            <p>MA in Machine Learning - 36 Credits</p>
             <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
             </div>
@@ -347,6 +347,11 @@
     margin-bottom: 20px;
 }
 
+.events p{
+    font-weight: bold;
+    padding-top: 20px;
+}
+
 .apply {
     display: flex;
     justify-content: space-between;
@@ -386,7 +391,7 @@
         margin-bottom: 20px;
     }
     .departments {
-    grid-template-columns: 1fr; /* Single column for small screens */
+    grid-template-columns: 1fr; 
   }
 }
 
