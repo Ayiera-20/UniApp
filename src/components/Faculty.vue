@@ -2,68 +2,110 @@
     <div class="faculty">
         <h1>Faculty Profile</h1>
         <p>Explore opportunities to engage with people, ideas, art, and education across campus.</p>
-        <form class="form-container">
-            <input type="text" placeholder="Keyword in name, title etc"/>
-            <select>
+        <form class="form-container" @submit.prevent>
+            <input type="text" placeholder="Keyword in name, title etc" v-model="searchKeyword"/>
+            <select v-model="selectedDepartment">
                 <option value="" disabled selected>Select department</option>
-                <option value="HR">HR</option>
-                <option value="Finance">Finance</option>
-                <option value="Marketing">Marketing</option>
+                <option value="all">Select all</option>
+                <option value="School of Computing">School of Computing</option>
+                <option value="School of Law">School of Law</option>
+                <option value="School of Buisnesss">School of Buisnesss</option>
+                <option value="School of Health & Sciences">School of Health & Sciences</option>
+                <option value="School of Engineering">School of Engineering</option>
+                <option value="School of Hospitality">Hospitality</option>
             </select>
             <button type="submit">Submit</button>
         </form>
 
         <div class="profiles">
-          <div>
-          <img src="./../assets/lec.jpg" alt="faculty profile photo" class="photo">
-          <p class="p-text1">John Doe</p>
-          <p class="p-text">Assistant Professor(School of Hospitaliy)</p>
-          <a href="#">  View Details</a>
-          </div>
-          <div>
-          <img src="./../assets/lec.jpg" alt="faculty profile photo" class="photo">
-          <p class="p-text1">John Doe</p>
-          <p class="p-text">Assistant Professor(School of Hospitaliy)</p>
-          <a href="#">  View Details</a>
-          </div>
-          <div>
-          <img src="./../assets/lec.jpg" alt="faculty profile photo" class="photo">
-          <p class="p-text1">John Doe</p>
-          <p class="p-text">Assistant Professor(School of Hospitaliy)</p>
-          <a href="#">  View Details</a>
-          </div>
-          <div>
-          <img src="./../assets/lec.jpg" alt="faculty profile photo" class="photo">
-          <p class="p-text1">John Doe</p>
-          <p class="p-text">Assistant Professor(School of Hospitaliy)</p>
-          <a href="#">  View Details</a>
-          </div>
-          <div>
-          <img src="./../assets/lec.jpg" alt="faculty profile photo" class="photo">
-          <p class="p-text1">John Doe</p>
-          <p class="p-text">Assistant Professor(School of Hospitaliy)</p>
-          <a href="#">  View Details</a>
-          </div>
-          <div>
-          <img src="./../assets/lec.jpg" alt="faculty profile photo" class="photo">
-          <p class="p-text1">John Doe</p>
-          <p class="p-text">Assistant Professor(School of Hospitaliy)</p>
-          <a href="#">  View Details</a>
+          <div v-for="profile in filteredProfiles" :key="profile.name">
+            <img :src="profile.photo" alt="faculty profile photo" class="photo" />
+            <p class="p-text1">{{ profile.name }}</p>
+            <p class="p-text">{{ profile.title }}</p>
+            <a href="#">View Details</a>
           </div>
         </div>
+
         <v-btn 
             color="black" 
             href="#"
-            class="more-btn">
+            class="view-more-btn">
                 View More
                 <v-icon right>mdi-arrow-right</v-icon>
             </v-btn>
 
        
         
-    </div>
+    </div> 
 
 </template>
+
+
+<script>
+import prof9 from '@/assets/prof9.jpg';
+import prof3 from '@/assets/prof3.jpg';
+import prof6 from '@/assets/prof6.jpg';
+import prof7 from '@/assets/prof7.jpg';
+import prof10 from '@/assets/prof10.jpg';
+import prof4 from '@/assets/prof4.jpg';
+export default {
+  data() {
+    return {
+      searchKeyword: '',
+      selectedDepartment: '',
+      profiles: [
+      {
+          name: "Zuri Dlamini",
+          title: "Senior Professor(School of Law)",
+          photo: new URL('@/assets/prof9.jpg', import.meta.url).href,
+        },
+        {
+          name: "John Doe",
+          title: "Assistant Professor(School of Health & Sciences)",
+          photo: new URL('@/assets/prof3.jpg', import.meta.url).href,
+        },
+
+        {
+          name: "Maria Perez",
+          title: "Senior Professor(School of Business)",
+          photo: new URL('@/assets/prof6.jpg', import.meta.url).href,
+        },
+        {
+          name: "Isabella Renata",
+          title: "Assistant Professor(School of Hospitality)",
+          photo: new URL('@/assets/prof7.jpg', import.meta.url).href,
+        },
+        {
+          name: "Zendaya Akosua",
+          title: "Senior Professor(School of Engineering)",
+          photo: new URL('@/assets/prof10.jpg', import.meta.url).href,
+        },
+        {
+          name: "Jabari Amadika",
+          title: "Assistant Professor(School of Computing)",
+          photo: new URL('@/assets/prof4.jpg', import.meta.url).href,
+        },
+      ],
+
+    };
+  },
+  computed: {
+    filteredProfiles() {
+      return this.profiles.filter((profile) => {
+        const matchesKeyword = profile.name.toLowerCase().includes(this.searchKeyword.toLowerCase()) ||
+                               profile.title.toLowerCase().includes(this.searchKeyword.toLowerCase());
+        const matchesDepartment =
+          this.selectedDepartment === 'all' ||
+          !this.selectedDepartment ||
+          profile.title.includes(this.selectedDepartment);
+
+        return matchesKeyword && matchesDepartment;
+      });
+    },
+  },
+};
+</script>
+
 
 <style>
 .faculty{
@@ -114,19 +156,31 @@
 }
 
 .profiles div {
-    display: flex; /* Flexbox for vertical stacking */
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Align items to the left */
-    text-align: left; /* Ensure text is aligned to the left */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: left; 
 }
 
 .p-text{
   color: gray;
+  padding-left: 10%;
 }
 
 .p-text1{
   font-weight: bold;
   text-align: left;
+  padding-top: 20px;
+
+}
+
+.view-more-btn{
+  width: 20%;
+  display: flex;
+  margin-left: 40%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
 }
 
 </style>
