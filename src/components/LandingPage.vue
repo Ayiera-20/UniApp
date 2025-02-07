@@ -132,6 +132,7 @@
                 View More
                 <v-icon right>mdi-arrow-right</v-icon>
             </v-btn>
+        </section>  
         <div class="apply">
             <div>
                 <h5>Choose your <br>right department</h5>
@@ -148,7 +149,7 @@
                 <img src="./../assets/portrait-young-woman-with-laptop-hands-outside-school.webp" alt="a student" width="450" height="300" loading = "lazy">
             </div>
         </div>
-        </section>    
+          
 
         
     </div>
@@ -192,6 +193,9 @@
 .campus_photos img,
 .campus_photos video {
     margin: 10px;
+    max-width: 100%;
+    height: auto; 
+    display: block;
 }
 
 .events div {
@@ -338,7 +342,7 @@
 
 .events-section{
     text-align: center;
-    padding: 60px;
+    padding: 50px;
 }
 .events-section h4{
     font-weight: bold;
@@ -357,6 +361,8 @@
     text-align: left;
     background-color: rgba(247,237,225,255);
     padding: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .apply div {
@@ -374,6 +380,12 @@
 
 
 @media (max-width: 768px) {
+    .uni-image h1{
+        font-size: 39px;;
+    }
+    .uni-image p{
+        font-size: 12px;
+    }
     .campus_photos img,
     .campus_photos video {
         width: 100%;
@@ -391,10 +403,65 @@
     .departments {
     grid-template-columns: 1fr; 
   }
+  .department-title{
+    font-size: 23px;
+  }
+
+  .campus_photos img{
+        width: 350px;
+        height: 250px;
+    }
+    .research p{
+        text-align: center;
+        max-width: 600px;
+        justify-content: center;
+        margin: 0 auto; 
+
+    }
+    .research-data .research-number{
+        padding: 0 20px 0 40px ;
+        font-size: 38px;
+    }
+
+    .events-section p{
+        text-align: center;
+        max-width: 600px;
+        justify-content: center;
+        margin: 0 auto; 
+
+    }
+
+    .apply {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 30px; 
+    }
+
+    .apply div {
+        margin: 0 0 20px 0; 
+    }
+    .apply p{
+        padding: 20px;
+    }
+
+   
+  
 }
 
+@media (max-width: 1050px){
+    .acad-p{
+        text-align: center;
+        max-width: 600px;
+        justify-content: center;
+        margin: 0 auto; 
+    }
 
+    .academics h3{
+        padding-top: 30px;
 
+    }
+
+}
 
 </style>
     
