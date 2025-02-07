@@ -21,13 +21,13 @@
             <img :src="profile.photo" alt="faculty profile photo" class="photo" />
             <p class="p-text1">{{ profile.name }}</p>
             <p class="p-text">{{ profile.title }}</p>
-            <a href="#">View Details</a>
+            <a href="/Faculty">View Details</a>
           </div>
         </div>
 
         <v-btn 
             color="black" 
-            href="#"
+            href="/Faculty"
             class="view-more-btn">
                 View More
                 <v-icon right>mdi-arrow-right</v-icon>
@@ -111,16 +111,26 @@ export default {
   justify-content: center;
   display: grid;
 }
+.faculty h1{
+  padding-top: 60px;
+
+}
 .faculty p, h1{
   text-align: center;
 }
+.faculty p{
+  padding: 6px;
+}
+
 .form-container{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    padding-bottom: 20px;
 }
 .form-container input,
 .form-container select,
@@ -152,6 +162,7 @@ export default {
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     margin-top: 50px;
+    padding-bottom: 40px;
 }
 
 .profiles div {
@@ -159,6 +170,11 @@ export default {
     flex-direction: column; 
     align-items: center; 
     text-align: left; 
+}
+
+.profiles a{
+  color: teal;
+  padding-bottom: 25px;
 }
 
 .p-text{
@@ -174,11 +190,31 @@ export default {
 }
 
 .view-more-btn{
-  width: 20%;
+  width: fit-content;
   display: flex;
-  margin-left: 40%;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 100px;
+
+}
+
+@media (max-width: 900px){
+  .profiles{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
+
+  @media (max-width: 768px) {
+    .faculty p{
+      text-align: center;
+      max-width: 600px;
+      justify-content: center;
+      margin: 0 auto; 
+
+    }
+  }
 
 }
 
