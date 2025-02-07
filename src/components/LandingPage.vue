@@ -407,7 +407,8 @@
     font-size: 23px;
   }
 
-  .campus_photos img{
+    .campus_photos img,
+    .campus_photos video {
         width: 350px;
         height: 250px;
     }
