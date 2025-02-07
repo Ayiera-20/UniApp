@@ -40,14 +40,14 @@
             <p>BSc in Electrical & Electronic Engineering - 140</p>
             <p>BSc in Civil Engineering - 140</p>
             <p>BSc in Electronics & Telecommunication Engineering - 140</p>
-            <a href="/departments" class="learn-more">Learn more &rarr;</a>
+            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
             <div class="department-card">
             <img src="./../assets/career-day.webp" alt="Department of Law" loading = "lazy">
             <h3 class="department-title">Department of Law</h3>
             <p>Bachelor of Law - 146 Credit Hours</p>
-            <a href="/departments" class="learn-more">Learn more &rarr;</a>
+            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
             <div class="department-card">
@@ -56,7 +56,7 @@
             <p>BBA - 123 Credits</p>
             <p>MBA (Regular) - 60 Credits</p>
             <p>EMBA (Executive) - 45 Credits</p>
-            <a href="/departments" class="learn-more">Learn more &rarr;</a>
+            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
             <div class="department-card">
@@ -64,7 +64,7 @@
             <h3 class="department-title">Department of Computing</h3>
             <p>BA in Computer Science - 120 Credits</p>
             <p>MA in Machine Learning - 36 Credits</p>
-            <a href="/departments" class="learn-more">Learn more &rarr;</a>
+            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
             </div>
             </div>
         </section>
@@ -139,7 +139,7 @@
                 <p>Offer extraordinary freedom to exlore, to collaborate, and <br> to challenge yourself.</p>
                 <v-btn 
             color="black" 
-            href="/register"
+            href="/Register"
             class="more-btn">
                 Apply Now
                 <v-icon right>mdi-arrow-right</v-icon>
