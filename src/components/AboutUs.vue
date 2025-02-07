@@ -62,7 +62,7 @@ export default {
 }
 
 .bg-image{
-  background: url('./../assets/Uni-image.jpg') no-repeat center center/cover;
+  background: url('./../assets/Uni-image.webp') no-repeat center center/cover;
   min-height: 10vh; 
   height: 50vh; 
   display: flex;

@@ -47,7 +47,7 @@
 
 <style>
 #courses{
-    background: url('./../assets/course.jpg') no-repeat center center/cover;
+    background: url('./../assets/course.webp') no-repeat center center/cover;
     min-height: 100vh; 
     height: 100vh; 
     background-blend-mode: overlay;
