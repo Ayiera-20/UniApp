@@ -56,33 +56,33 @@ export default {
       {
           name: "Zuri Dlamini",
           title: "Senior Professor(School of Law)",
-          photo: new URL('@/assets/prof9.jpg', import.meta.url).href,
+          photo: new URL('@/assets/prof9.webp', import.meta.url).href,
         },
         {
           name: "John Doe",
           title: "Assistant Professor(School of Health & Sciences)",
-          photo: new URL('@/assets/prof3.jpg', import.meta.url).href,
+          photo: new URL('@/assets/prof3.webp', import.meta.url).href,
         },
 
         {
           name: "Maria Perez",
           title: "Senior Professor(School of Business)",
-          photo: new URL('@/assets/prof6.jpg', import.meta.url).href,
+          photo: new URL('@/assets/prof6.webp', import.meta.url).href,
         },
         {
           name: "Isabella Renata",
           title: "Assistant Professor(School of Hospitality)",
-          photo: new URL('@/assets/prof7.jpg', import.meta.url).href,
+          photo: new URL('@/assets/prof7.webp', import.meta.url).href,
         },
         {
           name: "Zendaya Akosua",
           title: "Senior Professor(School of Engineering)",
-          photo: new URL('@/assets/prof10.jpg', import.meta.url).href,
+          photo: new URL('@/assets/prof10.webp', import.meta.url).href,
         },
         {
           name: "Jabari Amadika",
           title: "Assistant Professor(School of Computing)",
-          photo: new URL('@/assets/prof4.jpg', import.meta.url).href,
+          photo: new URL('@/assets/prof4.webp', import.meta.url).href,
         },
       ],
 

@@ -21,21 +21,21 @@
             <h3>200 major Programs</h3>
             <div class="major">
                 <div class="major-item">
-                    <img src="./../assets/young-student-learning-library.jpg" alt="young student studying" width="300" height="200">
+                    <img src="./../assets/young-student-learning-library.jpg" alt="young student studying" width="300" height="200" loading = "lazy">
                     <p>Graduate</p>
                 </div>
                 <div class="major-item">
-                    <img src="./../assets/portrait-woman-with-laptop-working.jpg" alt="portrait-woman-with-laptop-working" width="300" height="200">
+                    <img src="./../assets/portrait-woman-with-laptop-working.jpg" alt="portrait-woman-with-laptop-working" width="300" height="200" loading = "lazy">
                     <p>Lifelong learning</p>
                 </div>
                 <div class="major-item">
-                    <img src="./../assets/beautiful-day-campus.jpg" alt="young student smiling" width="300" height="200">
+                    <img src="./../assets/beautiful-day-campus.jpg" alt="young student smiling" width="300" height="200" loading = "lazy">
                     <p>Undergraduate</p>
                 </div>
             </div>    
             <div class="departments">
             <div class="department-card">
-            <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="Department of Engineering">
+            <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="Department of Engineering" loading = "lazy">
             <h3 class="department-title">Department of Engineering</h3>
             <p>BSc in Electrical & Electronic Engineering - 140</p>
             <p>BSc in Civil Engineering - 140</p>
@@ -44,14 +44,14 @@
             </div>
 
             <div class="department-card">
-            <img src="./../assets/career-day.jpg" alt="Department of Law">
+            <img src="./../assets/career-day.jpg" alt="Department of Law" loading = "lazy">
             <h3 class="department-title">Department of Law</h3>
             <p>Bachelor of Law - 146 Credit Hours</p>
             <a href="/departments" class="learn-more">Learn more &rarr;</a>
             </div>
 
             <div class="department-card">
-            <img src="./../assets/young-student-learning-library.jpg" alt="Department of Business ">
+            <img src="./../assets/young-student-learning-library.jpg" alt="Department of Business " loading = "lazy">
             <h3 class="department-title">Department of Business</h3>
             <p>BBA - 123 Credits</p>
             <p>MBA (Regular) - 60 Credits</p>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="department-card">
-            <img src="./../assets/techathon.jpg" alt="Department of Computing">
+            <img src="./../assets/techathon.jpg" alt="Department of Computing" loading = "lazy">
             <h3 class="department-title">Department of Computing</h3>
             <p>BA in Computer Science - 120 Credits</p>
             <p>MA in Machine Learning - 36 Credits</p>
@@ -74,13 +74,13 @@
             <p>Build a vibrant community of creative and accomplished people around the world</p>
             </div> 
         <div class="campus_photos">
-            <img src="./../assets/full-shot-young-people-hostel.jpg" alt="network" width="30%" height="300px">
-            <img src="./../assets/side-view-female-friends-playing-basketball.jpg" alt="students playing-basketball" width="30%" height="300px">
-            <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="students studying together" width="30%" height="300px">
-            <img src="./../assets/students-paying-attention-class.jpg" alt="students-paying-attention-class" width="30%" height="300px">
-            <img src="./../assets/multi-ethnic-group-graduates-smiling-with-success-generated-by-ai.jpg" alt="graduating students" width="30%" height="300px">
+            <img src="./../assets/full-shot-young-people-hostel.jpg" alt="network" width="30%" height="300px" loading = "lazy">
+            <img src="./../assets/side-view-female-friends-playing-basketball.jpg" alt="students playing-basketball" width="30%" height="300px" loading = "lazy">
+            <img src="./../assets/friends-people-group-teamwork-diversity.jpg" alt="students studying together" width="30%" height="300px" loading = "lazy">
+            <img src="./../assets/students-paying-attention-class.jpg" alt="students-paying-attention-class" width="30%" height="300px" loading = "lazy">
+            <img src="./../assets/multi-ethnic-group-graduates-smiling-with-success-generated-by-ai.jpg" alt="graduating students" width="30%" height="300px" loading = "lazy">
             <video width="30%" height="300px" autoplay muted>
-                <source src="./../assets/university-lib.mp4" type="video/mp4">
+                <source src="./../assets/university-lib.mp4" type="video/mp4" loading = "lazy">
             </video>
         </div>   
         <section class="research">
@@ -113,15 +113,15 @@
         <p>Explore opportunities to engage with people, ideas, art and education across campus.</p>
         <div class="events">
             <div>
-                <img src="./../assets/career-day.jpg" alt="career advisors" width="320" height="240">
+                <img src="./../assets/career-day.jpg" alt="career advisors" width="320" height="240" loading = "lazy">
                 <p>Career day</p>  
             </div>
             <div>
-                <img src="./../assets/culture-week.jpg" alt="students dressed in cultural attires" width="360" height="240">
+                <img src="./../assets/culture-week.jpg" alt="students dressed in cultural attires" width="360" height="240" loading = "lazy">
                 <p>Cultural week</p>
             </div>
             <div>
-                <img src="./../assets/tech.jpg" alt="computer technology" width="320" height="240">
+                <img src="./../assets/tech.jpg" alt="computer technology" width="320" height="240" loading = "lazy">
                 <p>Techathon</p>
             </div>
         </div>
@@ -145,7 +145,7 @@
             </v-btn>
             </div>
             <div>
-                <img src="./../assets/portrait-young-woman-with-laptop-hands-outside-school.jpg" alt="a student" width="450" height="300">
+                <img src="./../assets/portrait-young-woman-with-laptop-hands-outside-school.jpg" alt="a student" width="450" height="300" loading = "lazy">
             </div>
         </div>
         </section>    
@@ -154,10 +154,8 @@
     </div>
         
 </template>
-<script>
 
 
-</script>
 
 <style>
 #LandingPage {
@@ -214,7 +212,7 @@
 }
 
 .uni-image{
-    background: url('./../assets/Uni-image.jpg') no-repeat center center/cover;
+    background: url('./../assets/Uni-image.webp') no-repeat center center/cover;
     height: 600px;
     width: 100%;
     color: white;
