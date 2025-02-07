@@ -159,6 +159,10 @@
 
 
 <style>
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
 #LandingPage {
     display: flex;
     flex-direction: column;
