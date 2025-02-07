@@ -21,13 +21,12 @@
             <img :src="profile.photo" alt="faculty profile photo" class="photo" />
             <p class="p-text1">{{ profile.name }}</p>
             <p class="p-text">{{ profile.title }}</p>
-            <a href="/Faculty">View Details</a>
+            <router-link to="/Faculty">View Details &rarr;</router-link>
           </div>
         </div>
 
-        <v-btn 
+        <v-btn to="/Faculty"
             color="black" 
-            href="/Faculty"
             class="view-more-btn">
                 View More
                 <v-icon right>mdi-arrow-right</v-icon>

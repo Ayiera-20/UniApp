@@ -7,9 +7,8 @@
         <div class="purpose">
             <h2>A Purposeful University</h2>
             <p>Our mission is to provide a transformative educational experience that empowers individuals to achieve their full potential, foster innovation, and contribute to the advancement of society. Through excellence in teaching, research, and community engagement, we aim to cultivate leaders who inspire change and make a positive impact on the world.</p>
-            <v-btn 
+            <v-btn to="/about"
             color="black" 
-            href="/about"
             class="more-btn">
                 More About University of Africa
                 <v-icon right>mdi-arrow-right</v-icon>
@@ -40,14 +39,14 @@
             <p>BSc in Electrical & Electronic Engineering - 140</p>
             <p>BSc in Civil Engineering - 140</p>
             <p>BSc in Electronics & Telecommunication Engineering - 140</p>
-            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
             </div>
 
             <div class="department-card">
             <img src="./../assets/career-day.webp" alt="Department of Law" loading = "lazy">
             <h3 class="department-title">Department of Law</h3>
             <p>Bachelor of Law - 146 Credit Hours</p>
-            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
             </div>
 
             <div class="department-card">
@@ -56,7 +55,7 @@
             <p>BBA - 123 Credits</p>
             <p>MBA (Regular) - 60 Credits</p>
             <p>EMBA (Executive) - 45 Credits</p>
-            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
             </div>
 
             <div class="department-card">
@@ -64,7 +63,7 @@
             <h3 class="department-title">Department of Computing</h3>
             <p>BA in Computer Science - 120 Credits</p>
             <p>MA in Machine Learning - 36 Credits</p>
-            <a href="/Departments" class="learn-more">Learn more &rarr;</a>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
             </div>
             </div>
         </section>
@@ -100,9 +99,8 @@
                     <p>Publications</p>
                 </div>  
             </div>
-            <v-btn 
+            <v-btn to="/about"
             color="black" 
-            href="/about"
             class="more-btn">
                 More About Research
                 <v-icon right>mdi-arrow-right</v-icon>
@@ -127,7 +125,7 @@
         </div>
         <v-btn 
             color="black" 
-            href="/about"
+            :to="{ path: '/about' }"
             class="more-btn">
                 View More
                 <v-icon right>mdi-arrow-right</v-icon>
@@ -137,9 +135,8 @@
             <div>
                 <h5>Choose your <br>right department</h5>
                 <p>Offer extraordinary freedom to exlore, to collaborate, and <br> to challenge yourself.</p>
-                <v-btn 
+                <v-btn to="/Register"
             color="black" 
-            href="/Register"
             class="more-btn">
                 Apply Now
                 <v-icon right>mdi-arrow-right</v-icon>
