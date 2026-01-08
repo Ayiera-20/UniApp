@@ -1,21 +1,18 @@
 <template>
-    <div id = 'department'>
-        <v-container>
-            <v-container>
-                <v-layout column>
-                    <v-card
-                        class="mx-auto"
-                    >
-                    <v-toolbar
-                            color="teal"
-                            theme="dark"
-                        >
-                            <v-toolbar-title class="text-h6">
-                                Departments
-                            </v-toolbar-title>
-                        </v-toolbar>
-                        <v-container>
-                             <v-table>
+    <div id='department' class="page">
+        <v-container class="py-10 pageInner">
+            <div class="header" v-reveal>
+                <h1 class="title">Departments</h1>
+                <p class="subtitle">Explore schools and contact information across the university.</p>
+            </div>
+
+            <v-layout column>
+                <v-card class="mx-auto tableCard" rounded="lg" elevation="4" v-reveal>
+                    <v-toolbar color="teal" theme="dark">
+                        <v-toolbar-title class="text-h6">Departments</v-toolbar-title>
+                    </v-toolbar>
+                    <v-container>
+                        <v-table>
                                     <thead>
                                     <tr>
                                         <th class="text-left">Department name</th>
@@ -35,15 +32,14 @@
                                     </tr>
                                     </tbody>
                                 </v-table>
-                            
-                            </v-container>
-                
-                        <v-divider></v-divider>
-                    </v-card>
-                    </v-layout>
-             </v-container>
+
+                    </v-container>
+
+                    <v-divider></v-divider>
+                </v-card>
+            </v-layout>
         </v-container>
-        </div>            
+    </div>
 </template>
 
 <script>
@@ -89,8 +85,45 @@
 
 </script>
 
-<style>
-#department{
-    padding-bottom: 30px;
+<style scoped>
+#department {
+    width: 100%;
+    min-height: 100vh;
+    background: url('./../assets/hostel.webp') no-repeat center center/cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.72);
+    padding: 28px 0 48px;
+}
+
+.pageInner{
+    max-width: 1120px;
+}
+
+.header {
+    text-align: center;
+    max-width: 70ch;
+    margin: 0 auto 18px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.title {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.96);
+}
+
+.subtitle {
+    margin-top: 10px;
+    opacity: 0.88;
+}
+
+.tableCard {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.96);
 }
 </style>

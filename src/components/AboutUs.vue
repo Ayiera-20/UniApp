@@ -1,9 +1,9 @@
 <template>
   <div class="services-section">
-    <div class="bg-image">
+    <div class="bg-image" v-reveal>
     <h1>About Us</h1> 
   </div>
-    <v-container class="cards-container">
+    <v-container class="cards-container" v-reveal>
     <v-row>
         <v-col cols="12" md="4">
           <v-card class="pa-3 card" elevation="10" rounded="lg">

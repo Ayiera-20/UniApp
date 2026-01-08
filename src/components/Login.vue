@@ -6,7 +6,7 @@
   <div id="Login">
     <v-container>
       <v-layout column>
-        <v-card class="mx-auto" width="500">
+        <v-card class="mx-auto authCard" rounded="lg" elevation="8" v-reveal>
           <v-toolbar color="teal" dark>
             <v-toolbar-title class="text-h6">
               User Login
@@ -53,6 +53,11 @@ export default {
 
 <style>
 #Login{
-  padding: 80px 0 160px 0;
+  padding: 96px 0 140px;
+}
+
+.authCard{
+  width: 100%;
+  max-width: 520px;
 }
 </style>

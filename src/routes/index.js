@@ -13,6 +13,8 @@ import Classroom from  "./../components/Classroom.vue"
 import NewCourse from  "./../components/NewCourse.vue"
 import UpdateCourse from  "./../components/UpdateCourse.vue"
 import Faculty from '../components/Faculty.vue'
+import Admissions from '../components/Admissions.vue'
+import Contact from '../components/Contact.vue'
 
 
 
@@ -81,6 +83,16 @@ const routes =[
         name: 'faculty',
         component: Faculty,
 
+},
+{
+    path: '/admissions',
+    name: 'admissions',
+    component: Admissions,
+},
+{
+    path: '/contact',
+    name: 'contact',
+    component: Contact,
 }
 
 
@@ -88,6 +100,10 @@ const routes =[
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) return savedPosition
+        return { left: 0, top: 0 }
+    },
 })
 
 export default router

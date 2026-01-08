@@ -69,6 +69,7 @@ export default {
                     <v-card
                         class="mx-auto"
                         width="500"
+            v-reveal
                     >
                     <v-toolbar
                             color="teal"

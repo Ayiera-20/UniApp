@@ -4,8 +4,10 @@
             <v-container>
                 <v-layout column>
                     <v-card
-                        class="mx-auto"
-                        width="500"
+                        class="mx-auto authCard"
+                        rounded="lg"
+                        elevation="8"
+                        v-reveal
                     >
                     <v-toolbar
                             color="teal"
@@ -95,3 +97,14 @@
     }
 
 </script>
+
+<style scoped>
+#signup {
+    padding: 96px 0 140px;
+}
+
+.authCard {
+    width: 100%;
+    max-width: 520px;
+}
+</style>

@@ -1,41 +1,61 @@
 <template>
-    <div class="faculty">
-        <h1>Faculty Profile</h1>
-        <p>Explore opportunities to engage with people, ideas, art, and education across campus.</p>
-        <form class="form-container" @submit.prevent>
-            <input type="text" placeholder="Keyword in name, title etc" v-model="searchKeyword"/>
-            <select v-model="selectedDepartment">
-                <option value="" disabled selected>Select department</option>
-                <option value="all">Select all</option>
-                <option value="School of Computing">School of Computing</option>
-                <option value="School of Law">School of Law</option>
-                <option value="School of Buisnesss">School of Buisnesss</option>
-                <option value="School of Health & Sciences">School of Health & Sciences</option>
-                <option value="School of Engineering">School of Engineering</option>
-                <option value="School of Hospitality">Hospitality</option>
-            </select>
-        </form>
+  <div class="page">
+    <v-container class="py-10">
+      <div class="header" v-reveal>
+        <h1 class="title">Faculty</h1>
+        <p class="subtitle">Search faculty profiles by name or department.</p>
+      </div>
 
-        <div class="profiles">
-          <div v-for="profile in filteredProfiles" :key="profile.name">
-            <img :src="profile.photo" alt="faculty profile photo" class="photo" />
-            <p class="p-text1">{{ profile.name }}</p>
-            <p class="p-text">{{ profile.title }}</p>
-            <router-link to="/Faculty">View Details &rarr;</router-link>
-          </div>
-        </div>
+      <v-card class="filters" rounded="lg" elevation="4" v-reveal>
+        <v-card-text>
+          <v-row dense>
+            <v-col cols="12" md="7">
+              <v-text-field
+                v-model="searchKeyword"
+                label="Search"
+                placeholder="Keyword in name or title"
+                variant="outlined"
+                color="teal"
+                hide-details
+                clearable
+              />
+            </v-col>
+            <v-col cols="12" md="5">
+              <v-select
+                v-model="selectedDepartment"
+                :items="departments"
+                label="Department"
+                variant="outlined"
+                color="teal"
+                hide-details
+                clearable
+              />
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
 
-        <v-btn to="/Faculty"
-            color="black" 
-            class="view-more-btn">
-                View More
-                <v-icon right>mdi-arrow-right</v-icon>
-            </v-btn>
+      <v-row class="mt-6" dense v-reveal>
+        <v-col v-for="profile in filteredProfiles" :key="profile.name" cols="12" sm="6" md="4">
+          <v-card class="profileCard" rounded="lg" elevation="4">
+            <img :src="profile.photo" :alt="`${profile.name} profile photo`" class="profilePhoto" loading="lazy" />
+            <v-card-text>
+              <p class="profileName">{{ profile.name }}</p>
+              <p class="profileTitle">{{ profile.title }}</p>
+              <router-link to="/Faculty" class="detailsLink">View Details &rarr;</router-link>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
 
-       
-        
-    </div> 
-
+      <div class="cta" v-reveal>
+        <v-btn to="/Faculty" color="teal" class="view-more-btn">
+          View More
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 
@@ -51,6 +71,14 @@ export default {
     return {
       searchKeyword: '',
       selectedDepartment: '',
+      departments: [
+        'School of Computing',
+        'School of Law',
+        'School of Business',
+        'School of Health & Sciences',
+        'School of Engineering',
+        'School of Hospitality',
+      ],
       profiles: [
       {
           name: "Zuri Dlamini",
@@ -93,9 +121,7 @@ export default {
         const matchesKeyword = profile.name.toLowerCase().includes(this.searchKeyword.toLowerCase()) ||
                                profile.title.toLowerCase().includes(this.searchKeyword.toLowerCase());
         const matchesDepartment =
-          this.selectedDepartment === 'all' ||
-          !this.selectedDepartment ||
-          profile.title.includes(this.selectedDepartment);
+          !this.selectedDepartment || profile.title.includes(this.selectedDepartment);
 
         return matchesKeyword && matchesDepartment;
       });
@@ -105,116 +131,78 @@ export default {
 </script>
 
 
-<style>
-.faculty{
-  justify-content: center;
-  display: grid;
-}
-.faculty h1{
-  padding-top: 60px;
-
-}
-.faculty p, h1{
-  text-align: center;
-}
-.faculty p{
-  padding: 6px;
-}
-
-.form-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    padding-bottom: 20px;
-}
-.form-container input,
-.form-container select,
-.form-container button{
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 8px 12px;
-}
-
-.form-container button {
-      background-color: red;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .form-container button:hover {
-      background-color: darkred;
-    }
-
-.photo{
-  max-width: 200px;
+<style scoped>
+.page {
   width: 100%;
-  height: auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 70ch;
   margin: 0 auto;
 }
 
-.profiles{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-    margin-top: 50px;
-    padding-bottom: 40px;
+.title {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-heading);
 }
 
-.profiles div {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: left; 
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
-.profiles a{
-  color: teal;
-  padding-bottom: 25px;
+.filters {
+  margin-top: 22px;
 }
 
-.p-text{
-  color: gray;
-  padding-left: 10%;
+.profileCard {
+  overflow: hidden;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
-.p-text1{
-  font-weight: bold;
-  text-align: left;
-  padding-top: 20px;
-
+.profileCard:hover {
+  transform: translateY(-6px);
 }
 
-.view-more-btn{
-  width: fit-content;
+.profilePhoto {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background: var(--color-background-soft);
+  display: block;
+}
+
+.profileName {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.profileTitle {
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.detailsLink {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.cta {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 100px;
-
+  margin-top: 28px;
 }
 
-@media (max-width: 900px){
-  .profiles{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+@media (prefers-reduced-motion: reduce) {
+  .profileCard {
+    transition: none;
   }
-
-  @media (max-width: 768px) {
-    .faculty p{
-      text-align: center;
-      max-width: 600px;
-      justify-content: center;
-      margin: 0 auto; 
-
-    }
-  }
-
 }
-
 </style>

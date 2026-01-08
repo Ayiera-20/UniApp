@@ -1,21 +1,18 @@
 <template>
-  <div id = 'courses'>
-      <v-container>
+  <div id='courses'>
+    <v-container class="py-10">
+      <div class="header" v-reveal>
+        <h1 class="title">Courses</h1>
+        <p class="subtitle">Browse available courses and associated departments.</p>
+      </div>
+
+      <v-layout column>
+        <v-card class="mx-auto tableCard" rounded="lg" elevation="8" v-reveal>
+          <v-toolbar color="teal" theme="dark">
+            <v-toolbar-title class="text-h6">Courses</v-toolbar-title>
+          </v-toolbar>
           <v-container>
-              <v-layout column>
-                  <v-card
-                      class="mx-auto"
-                  >
-                  <v-toolbar
-                          color="teal"
-                          theme="dark"
-                      >
-                          <v-toolbar-title class="text-h6">
-                             Courses
-                          </v-toolbar-title>
-                      </v-toolbar>
-                      <v-container>
-                           <v-table>
+            <v-table>
                                   <thead>
                                   <tr>
                                       <th class="text-left">Coursename</th>
@@ -33,25 +30,46 @@
                                   </tr>                                      
                                   </tbody>
                               </v-table>
-                          
-                          </v-container>
-              
-                      <v-divider></v-divider>
-                  </v-card>
-                  </v-layout>
-           </v-container>
-      </v-container>
-      </div>
+          </v-container>
+
+          <v-divider></v-divider>
+        </v-card>
+      </v-layout>
+    </v-container>
+  </div>
    
 </template>
 
-<style>
-#courses{
-    background: url('./../assets/course.webp') no-repeat center center/cover;
-    min-height: 100vh; 
-    height: 100vh; 
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.7);
+<style scoped>
+#courses {
+  width: 100%;
+  padding-bottom: 72px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url('./../assets/course.webp') no-repeat center/cover;
+}
+
+.header {
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto 18px;
+  color: white;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.92;
+}
+
+.tableCard {
+  width: 100%;
+  max-width: 1100px;
 }
 </style>
 

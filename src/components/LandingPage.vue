@@ -1,293 +1,529 @@
 <template>
-    <div id = 'LandingPage'>
-        <div class="uni-image">
-            <h1>Welcome to University of Africa</h1>
-            <p>Where Knowledge Meets Innovation, and Futures Are Forged.</p>
-        </div>
-        <div class="purpose">
-            <h2>A Purposeful University</h2>
-            <p>Our mission is to provide a transformative educational experience that empowers individuals to achieve their full potential, foster innovation, and contribute to the advancement of society. Through excellence in teaching, research, and community engagement, we aim to cultivate leaders who inspire change and make a positive impact on the world.</p>
-            <v-btn to="/about"
-            color="black" 
-            class="more-btn">
-                More About University of Africa
-                <v-icon right>mdi-arrow-right</v-icon>
-            </v-btn>
-        </div>
-        <section class="academics">
-            <h2>Academics</h2>
-            <p class="acad-p">We offer broad and balanced academic programs that are mutually reinforcing and empahsize high quality and creative instruction at the undergraduate and graduate levels.</p>
-            <h3>200 major Programs</h3>
-            <div class="major">
-                <div class="major-item">
-                    <img src="./../assets/young-student-learning-library.webp" alt="young student studying" width="300" height="200" loading = "lazy">
-                    <p>Graduate</p>
-                </div>
-                <div class="major-item">
-                    <img src="./../assets/portrait-woman-with-laptop-working.webp" alt="portrait-woman-with-laptop-working" width="300" height="200" loading = "lazy">
-                    <p>Lifelong learning</p>
-                </div>
-                <div class="major-item">
-                    <img src="./../assets/beautiful-day-campus.webp" alt="young student smiling" width="300" height="200" loading = "lazy">
-                    <p>Undergraduate</p>
-                </div>
-            </div>    
-            <div class="departments">
-            <div class="department-card">
-            <img src="./../assets/friends-people-group-teamwork-diversity.webp" alt="Department of Engineering" loading = "lazy">
-            <h3 class="department-title">Department of Engineering</h3>
-            <p>BSc in Electrical & Electronic Engineering - 140</p>
-            <p>BSc in Civil Engineering - 140</p>
-            <p>BSc in Electronics & Telecommunication Engineering - 140</p>
-            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
-            </div>
+  <div class="landing">
+    <header class="hero">
+      <div class="hero__content" v-reveal>
+        <p class="hero__kicker parallax" v-parallax="{ speed: 0.22, max: 22 }">University of Africa</p>
+        <h1 class="hero__title parallax" v-parallax="{ speed: 0.16, max: 26 }">Where knowledge meets innovation.</h1>
+        <p class="hero__lead">
+          A modern university experience built on excellent teaching, impactful research, and a vibrant campus community.
+        </p>
 
-            <div class="department-card">
-            <img src="./../assets/career-day.webp" alt="Department of Law" loading = "lazy">
-            <h3 class="department-title">Department of Law</h3>
-            <p>Bachelor of Law - 146 Credit Hours</p>
-            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
-            </div>
-
-            <div class="department-card">
-            <img src="./../assets/young-student-learning-library.webp" alt="Department of Business " loading = "lazy">
-            <h3 class="department-title">Department of Business</h3>
-            <p>BBA - 123 Credits</p>
-            <p>MBA (Regular) - 60 Credits</p>
-            <p>EMBA (Executive) - 45 Credits</p>
-            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
-            </div>
-
-            <div class="department-card">
-            <img src="./../assets/techathon.webp" alt="Department of Computing" loading = "lazy">
-            <h3 class="department-title">Department of Computing</h3>
-            <p>BA in Computer Science - 120 Credits</p>
-            <p>MA in Machine Learning - 36 Credits</p>
-            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
-            </div>
-            </div>
-        </section>
-        
-            <div class="campus_life">
-            <h3>CAMPUS LIFE</h3>
-            <p>Build a vibrant community of creative and accomplished people around the world</p>
-            </div> 
-        <div class="campus_photos">
-            <img src="./../assets/full-shot-young-people-hostel.webp" alt="network" width="30%" height="300px" loading = "lazy">
-            <img src="./../assets/side-view-female-friends-playing-basketball.webp" alt="students playing-basketball" width="30%" height="300px" loading = "lazy">
-            <img src="./../assets/friends-people-group-teamwork-diversity.webp" alt="students studying together" width="30%" height="300px" loading = "lazy">
-            <img src="./../assets/students-paying-attention-class.webp" alt="students-paying-attention-class" width="30%" height="300px" loading = "lazy">
-            <img src="./../assets/multi-ethnic-group-graduates-smiling-with-success-generated-by-ai.webp" alt="graduating students" width="30%" height="300px" loading = "lazy">
-            <video width="30%" height="300px" autoplay muted>
-                <source src="./../assets/university-lib.mp4" type="video/mp4" loading = "lazy">
-            </video>
-        </div>   
-        <section class="research">
-            <h4>Research</h4>
-            <p>
-                University of Africa is a vibrant research community having a good number of research works, 
-                initiatives functions of diverse disciplines. The motive of this community is to create sustain a sisgnificant mark inside
-                the cointry and globally as well through its research, innovation, ideas actions.
-            </p>
-            <div class="research-data">
-                <div>
-                    <p class="research-number">15+</p>
-                    <p> Case study</p>
-                </div>
-                <div>
-                    <p class="research-number">13+</p>
-                    <p>Publications</p>
-                </div>  
-            </div>
-            <v-btn to="/about"
-            color="black" 
-            class="more-btn">
-                More About Research
-                <v-icon right>mdi-arrow-right</v-icon>
-            </v-btn>
-        </section> 
-        <section class="events-section">
-            <h4>Upcoming events</h4>
-        <p>Explore opportunities to engage with people, ideas, art and education across campus.</p>
-        <div class="events">
-            <div>
-                <img src="./../assets/career-day.webp" alt="career advisors" width="320" height="240" loading = "lazy">
-                <p>Career day</p>  
-            </div>
-            <div>
-                <img src="./../assets/culture-week.webp" alt="students dressed in cultural attires" width="360" height="240" loading = "lazy">
-                <p>Cultural week</p>
-            </div>
-            <div>
-                <img src="./../assets/tech.webp" alt="computer technology" width="320" height="240" loading = "lazy">
-                <p>Techathon</p>
-            </div>
+        <div class="floatWords parallax" v-parallax="{ speed: 0.12, max: 18 }" aria-hidden="true">
+          <span class="floatWords__pill">Innovation</span>
+          <span class="floatWords__pill">Research</span>
+          <span class="floatWords__pill">Community</span>
+          <span class="floatWords__pill">Leadership</span>
         </div>
-        <v-btn 
-            color="black" 
-            :to="{ path: '/about' }"
-            class="more-btn">
-                View More
-                <v-icon right>mdi-arrow-right</v-icon>
-            </v-btn>
-        </section>  
-        <div class="apply">
-            <div>
-                <h5>Choose your <br>right department</h5>
-                <p>Offer extraordinary freedom to exlore, to collaborate, and <br> to challenge yourself.</p>
-                <v-btn to="/Register"
-            color="black" 
-            class="more-btn">
-                Apply Now
-                <v-icon right>mdi-arrow-right</v-icon>
-            </v-btn>
-            </div>
-            <div>
-                <img src="./../assets/portrait-young-woman-with-laptop-hands-outside-school.webp" alt="a student" width="450" height="300" loading = "lazy">
-            </div>
-        </div>
-          
 
-        
-    </div>
-        
+        <div class="hero__actions">
+          <v-btn to="/Register" color="teal" class="more-btn">
+            Apply Now
+            <v-icon right>mdi-arrow-right</v-icon>
+          </v-btn>
+          <v-btn to="/Departments" variant="outlined" color="white" class="more-btn more-btn--secondary">
+            Explore Programs
+          </v-btn>
+        </div>
+
+        <div class="hero__stats parallax" v-parallax="{ speed: 0.1, max: 16 }" aria-label="Key university stats">
+          <div class="stat">
+            <p class="stat__value">200+</p>
+            <p class="stat__label">Programs</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">15+</p>
+            <p class="stat__label">Case studies</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">13+</p>
+            <p class="stat__label">Publications</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section section--lined">
+      <div class="container" v-reveal>
+        <h2 class="section__title">A purposeful university</h2>
+        <p class="section__lead">
+          Our mission is to provide a transformative educational experience that empowers individuals to achieve their full
+          potential, foster innovation, and contribute to the advancement of society through excellence in teaching, research,
+          and community engagement.
+        </p>
+        <v-btn to="/about" color="teal" class="more-btn">
+          More About University of Africa
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+      </div>
+    </section>
+
+    <section class="section section--alt section--lined">
+      <div class="container" v-reveal>
+        <h2 class="section__title">Academics</h2>
+        <p class="section__lead">
+          We offer broad and balanced academic programs that are mutually reinforcing and emphasize high-quality, creative
+          instruction at the undergraduate and graduate levels.
+        </p>
+
+        <h3 class="section__subtitle">Programs</h3>
+        <div class="cardGrid" aria-label="Program types">
+          <div class="card">
+            <img src="./../assets/young-student-learning-library.webp" alt="Student studying in the library" loading="lazy" />
+            <div class="card__body">
+              <p class="card__title">Graduate</p>
+              <p class="card__meta">Advance your expertise with research-led learning.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./../assets/portrait-woman-with-laptop-working.webp"
+              alt="Learner working on a laptop"
+              loading="lazy"
+            />
+            <div class="card__body">
+              <p class="card__title">Lifelong learning</p>
+              <p class="card__meta">Flexible pathways for working professionals.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./../assets/beautiful-day-campus.webp" alt="Students on campus" loading="lazy" />
+            <div class="card__body">
+              <p class="card__title">Undergraduate</p>
+              <p class="card__meta">Build strong foundations and real-world skills.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section__subtitle">Departments</h3>
+        <div class="departments">
+          <div class="department-card">
+            <img src="./../assets/friends-people-group-teamwork-diversity.webp" alt="Students collaborating" loading="lazy" />
+            <h4 class="department-title">Department of Engineering</h4>
+            <p>BSc in Electrical &amp; Electronic Engineering — 140</p>
+            <p>BSc in Civil Engineering — 140</p>
+            <p>BSc in Electronics &amp; Telecommunication Engineering — 140</p>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
+          </div>
+
+          <div class="department-card">
+            <img src="./../assets/career-day.webp" alt="Students at a career event" loading="lazy" />
+            <h4 class="department-title">Department of Law</h4>
+            <p>Bachelor of Law — 146 Credit Hours</p>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
+          </div>
+
+          <div class="department-card">
+            <img src="./../assets/young-student-learning-library.webp" alt="Business students studying" loading="lazy" />
+            <h4 class="department-title">Department of Business</h4>
+            <p>BBA — 123 Credits</p>
+            <p>MBA (Regular) — 60 Credits</p>
+            <p>EMBA (Executive) — 45 Credits</p>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
+          </div>
+
+          <div class="department-card">
+            <img src="./../assets/techathon.webp" alt="Students presenting a technology project" loading="lazy" />
+            <h4 class="department-title">Department of Computing</h4>
+            <p>BA in Computer Science — 120 Credits</p>
+            <p>MA in Machine Learning — 36 Credits</p>
+            <router-link to="/Departments" class="learn-more">Learn more &rarr;</router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--lined">
+      <div class="container" v-reveal>
+        <h2 class="section__title">Campus life</h2>
+        <p class="section__lead">
+          Build a vibrant community of creative and accomplished people from around the world.
+        </p>
+
+        <div class="mediaGrid" aria-label="Campus life gallery">
+          <img src="./../assets/full-shot-young-people-hostel.webp" alt="Students in a hostel" loading="lazy" />
+          <img
+            src="./../assets/side-view-female-friends-playing-basketball.webp"
+            alt="Students playing basketball"
+            loading="lazy"
+          />
+          <img src="./../assets/friends-people-group-teamwork-diversity.webp" alt="Students studying together" loading="lazy" />
+          <img
+            src="./../assets/students-paying-attention-class.webp"
+            alt="Students paying attention in class"
+            loading="lazy"
+          />
+          <img
+            src="./../assets/multi-ethnic-group-graduates-smiling-with-success-generated-by-ai.webp"
+            alt="Graduating students"
+            loading="lazy"
+          />
+          <video
+            class="mediaGrid__video"
+            controls
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="University library video"
+          >
+            <source src="./../assets/university-lib.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt section--lined">
+      <div class="container" v-reveal>
+        <h2 class="section__title">Research</h2>
+        <p class="section__lead">
+          University of Africa is a vibrant research community with initiatives across diverse disciplines. We aim to make a
+          significant impact locally and globally through research, innovation, and action.
+        </p>
+
+        <div class="research-data" aria-label="Research highlights">
+          <div class="stat stat--large">
+            <p class="stat__value">15+</p>
+            <p class="stat__label">Case studies</p>
+          </div>
+          <div class="stat stat--large">
+            <p class="stat__value">13+</p>
+            <p class="stat__label">Publications</p>
+          </div>
+        </div>
+
+        <v-btn to="/about" color="teal" class="more-btn">
+          More About Research
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+      </div>
+    </section>
+
+    <section class="section section--lined">
+      <div class="container" v-reveal>
+        <h2 class="section__title">Upcoming events</h2>
+        <p class="section__lead">Explore opportunities to engage with people, ideas, art, and education across campus.</p>
+
+        <div class="events" aria-label="Events">
+          <div class="event-card">
+            <img src="./../assets/career-day.webp" alt="Career advisors" loading="lazy" />
+            <p class="event-card__title">Career day</p>
+          </div>
+          <div class="event-card">
+            <img src="./../assets/culture-week.webp" alt="Students dressed in cultural attire" loading="lazy" />
+            <p class="event-card__title">Cultural week</p>
+          </div>
+          <div class="event-card">
+            <img src="./../assets/tech.webp" alt="Computer technology" loading="lazy" />
+            <p class="event-card__title">Techathon</p>
+          </div>
+        </div>
+
+        <v-btn color="teal" :to="{ path: '/about' }" class="more-btn">
+          View More
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+      </div>
+    </section>
+
+    <section class="section section--alt section--lined">
+      <div class="container apply" v-reveal>
+        <div class="apply__copy">
+          <h2 class="section__title">Choose your right department</h2>
+          <p class="section__lead">Offer extraordinary freedom to explore, collaborate, and challenge yourself.</p>
+          <v-btn to="/Register" color="teal" class="more-btn">
+            Apply Now
+            <v-icon right>mdi-arrow-right</v-icon>
+          </v-btn>
+        </div>
+        <div class="apply__media">
+          <img
+            class="parallax"
+            v-parallax="{ speed: 0.1, max: 18 }"
+            src="./../assets/portrait-young-woman-with-laptop-hands-outside-school.webp"
+            alt="A student with a laptop"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
-
-
-<style>
-body, html {
-  overflow-x: hidden;
+<style scoped>
+.landing {
   width: 100%;
 }
-#LandingPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.campus_life{
-    padding: 20px;
-    margin-top: 40px;
-}
-.campus_life h2{
-    font-weight: bold;
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.awards,
-.major,
-.courses,
-.campus_life,
-.events,
-.apply {
-    text-align: center;
+.section {
+  padding: 72px 0;
 }
 
-.logos,
-.major,
-.campus_photos,
-.events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.section--lined {
+  position: relative;
 }
 
-.campus_photos img,
-.campus_photos video {
-    margin: 10px;
-    max-width: 100%;
-    height: auto; 
-    display: block;
+.section--lined::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--color-border);
 }
 
-.events div {
-    margin: 20px;
+.section--alt {
+  background: var(--color-background-soft);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
-
-.major {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+.section__title {
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-heading);
+  position: relative;
+  padding-left: 14px;
 }
 
-.major-item {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-right: 5px;
+.section__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  bottom: 0.25em;
+  width: 3px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-heading) 35%, transparent);
 }
 
-.uni-image{
-    background: url('./../assets/Uni-image.webp') no-repeat center center/cover;
-    height: 600px;
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.3)
+.section__subtitle {
+  margin-top: 36px;
+  font-size: 22px;
+  color: var(--color-heading);
 }
 
-.uni-image h1{
-    font-size: 80px;
+.section__lead {
+  margin-top: 12px;
+  max-width: 75ch;
+  color: var(--color-text);
+  opacity: 0.9;
 }
 
-.purpose{
-    text-align: center;
-    padding: 60px;
-    margin-left: 120px;
-    margin-right: 120px;
+.hero {
+  min-height: 620px;
+  width: 100%;
+  color: white;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.2)),
+    url('./../assets/Uni-image.webp') no-repeat center/cover;
+  display: flex;
+  align-items: center;
 }
 
-.more-btn{
-    margin-top: 20px;
+.hero__content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.hero__title {
+  margin-top: 14px;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero__lead {
+  margin-top: 16px;
+  max-width: 70ch;
+  font-size: 18px;
+  opacity: 0.92;
+}
+
+.floatWords {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.floatWords__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero__actions {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.more-btn--secondary {
+  border-color: rgba(255, 255, 255, 0.75) !important;
+  color: #ffffff !important;
+}
+
+.more-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+.more-btn {
+  margin-top: 20px;
+}
+
+.hero__stats {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 720px;
+}
+
+.stat {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(6px);
+}
+
+.stat__value {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat__label {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.stat--large {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+.stat--large .stat__value {
+  color: var(--color-heading);
+}
+
+.cardGrid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.card__body {
+  padding: 14px 14px 16px;
+}
+
+.card__title {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.card__meta {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .departments {
+  margin-top: 18px;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 20px; 
-  max-width: 800px;
-  margin: 0 auto; 
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .department-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-background);
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .department-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .department-card,
+  .event-card {
+    transition: none;
+  }
 }
 
 .department-card img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
+  background: var(--color-background-soft);
+  display: block;
 }
 
 .department-title {
-  font-size: 1.5rem;
-  margin: 15px 0 0 0px;
-  color: rgb(7, 70, 7); 
+  font-size: 18px;
+  margin: 14px 14px 6px;
+  font-weight: 700;
+  color: var(--color-heading);
 }
 
 .department-card p {
-  margin: 5px 15px;
-  font-size: 0.9rem;
-  color: #555;
+  margin: 6px 14px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .learn-more {
   display: inline-block;
-  margin: 15px;
-  font-size: 0.9rem;
-  color: #e74c3c; 
+  margin: 12px 14px 16px;
+  font-size: 14px;
+  color: var(--color-heading);
   text-decoration: none;
   font-weight: bold;
 }
@@ -296,174 +532,121 @@ body, html {
   text-decoration: underline;
 }
 
-.academics{
-    background-color: rgba(247,237,225,255);
-    padding: 60px 100px 100px 100px;
-}
-.academics h2{
-    text-align: center;
-    font-weight: bold;
-}
-.academics h3{
-    text-align: center;
-    padding-bottom: 20px;
-}
-.acad-p{
-    text-align: center;
-    margin: 20px 280px 40px 280px;
+.research-data {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.research{
-    text-align: center;
-    background-color: rgba(247,237,225,255);
-    padding: 60px 100px 50px 100px;
-    margin: 20px 0 30px;
+.mediaGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.research h4{
-    font-weight: bold;
+.mediaGrid img,
+.mediaGrid video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  display: block;
 }
 
-.research p{
-    padding: 20px 100px 0 100px;
+.events {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.research-data{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; 
-    max-width: 800px;
-    margin: 0 auto; 
-}
-.research-number{
-    font-size: 60px;
-    font-weight: bold;
-    color: #e74c3c;
+.event-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
 }
 
-.events-section{
-    text-align: center;
-    padding: 50px;
-}
-.events-section h4{
-    font-weight: bold;
-    margin-bottom: 20px;
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
-.events p{
-    font-weight: bold;
-    padding-top: 20px;
+.event-card__title {
+  padding: 12px 14px 14px;
+  font-weight: 700;
+  color: var(--color-heading);
 }
 
 .apply {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    text-align: left;
-    background-color: rgba(247,237,225,255);
-    padding: 60px;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 24px;
 }
 
-.apply div {
-    margin-right: 80px;
+.apply__media img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  display: block;
 }
-
-.apply p{
-    padding: 10px 0px 0px 0px;
-}
-
-.apply h5{
-    font-weight: bold;
-}
-
-
 
 @media (max-width: 768px) {
-    .uni-image h1{
-        font-size: 39px;;
-    }
-    .uni-image p{
-        font-size: 12px;
-    }
-    .campus_photos img,
-    .campus_photos video {
-        width: 100%;
-    }
-
-    .apply {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .apply div {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    .departments {
-    grid-template-columns: 1fr; 
-  }
-  .department-title{
-    font-size: 23px;
+  .section {
+    padding: 56px 0;
   }
 
-    .campus_photos img,
-    .campus_photos video {
-        width: 350px;
-        height: 250px;
-    }
-    .research p{
-        text-align: center;
-        max-width: 600px;
-        justify-content: center;
-        margin: 0 auto; 
+  .hero {
+    min-height: 520px;
+  }
 
-    }
-    .research-data .research-number{
-        padding: 0 20px 0 40px ;
-        font-size: 38px;
-    }
+  .hero__title {
+    font-size: 38px;
+  }
 
-    .events-section p{
-        text-align: center;
-        max-width: 600px;
-        justify-content: center;
-        margin: 0 auto; 
+  .hero__lead {
+    font-size: 15px;
+  }
 
-    }
+  .hero__stats {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
 
-    .apply {
-        flex-direction: column; 
-        text-align: center; 
-        padding: 30px; 
-    }
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
 
-    .apply div {
-        margin: 0 0 20px 0; 
-    }
-    .apply p{
-        padding: 20px;
-    }
+  .departments {
+    grid-template-columns: 1fr;
+  }
 
-   
-  
+  .mediaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaGrid img,
+  .mediaGrid video {
+    height: 240px;
+  }
+
+  .events {
+    grid-template-columns: 1fr;
+  }
+
+  .apply {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
-
-@media (max-width: 1050px){
-    .acad-p{
-        text-align: center;
-        max-width: 600px;
-        justify-content: center;
-        margin: 0 auto; 
-    }
-
-    .academics h3{
-        padding-top: 30px;
-
-    }
-
-}
-
 </style>
-    
+
